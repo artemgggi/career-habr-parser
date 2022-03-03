@@ -3,6 +3,7 @@ import org.quartz.impl.StdSchedulerFactory;
 import java.util.ArrayList;
 import java.util.List;
 import static org.quartz.SimpleScheduleBuilder.simpleSchedule;
+import static org.quartz.TriggerBuilder.newTrigger;
 
 public class AlertRabbit {
     public static void main(String[] args) {
@@ -18,11 +19,11 @@ public class AlertRabbit {
             SimpleScheduleBuilder times = simpleSchedule()
                     .withIntervalInSeconds(5)
                     .repeatForever();
-            Trigger trigger = new Trigger()
+            Trigger trigger = newTrigger()
                     .startNow()
                     .withSchedule(times)
                     .build();
-            scheduler.scheduleJob(job, trigger);
+            scheduler.scheduleJob(, trigger);
             Thread.sleep(5000);
             scheduler.shutdown();
             System.out.println(store);
