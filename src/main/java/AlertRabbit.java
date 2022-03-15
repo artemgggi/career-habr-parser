@@ -23,7 +23,6 @@ public class AlertRabbit {
                     .startNow()
                     .withSchedule(times)
                     .build();
-            scheduler.scheduleJob(, trigger);
             Thread.sleep(5000);
             scheduler.shutdown();
             System.out.println(store);
