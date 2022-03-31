@@ -1,6 +1,5 @@
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
-
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
@@ -12,8 +11,6 @@ import static org.quartz.TriggerBuilder.*;
 import static org.quartz.SimpleScheduleBuilder.*;
 
 public class AlertRabbit {
-    public AlertRabbit() {
-    }
 
     public static void main(String[] args) {
         try {
@@ -66,9 +63,8 @@ public class AlertRabbit {
             System.out.println(hashCode());
         }
         @Override
-        public void execute(JobExecutionContext context)
-                throws JobExecutionException {
-            System.out.println("Rabbit runs here ...");
+        public void execute(JobExecutionContext context) {
+            System.out.println("Rabbit runs here");
             List<Long> store = (List<Long>) context
                     .getJobDetail()
                     .getJobDataMap()
