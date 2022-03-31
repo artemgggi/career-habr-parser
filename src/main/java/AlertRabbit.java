@@ -1,5 +1,10 @@
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
+
+import java.sql.Connection;
+import java.sql.DatabaseMetaData;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import static org.quartz.JobBuilder.*;
@@ -12,6 +17,18 @@ public class AlertRabbit {
 
     public static void main(String[] args) {
         try {
+            Class.forName("org.postgresql.Driver");
+            String url = "jdbc:postgresql://localhost:5432/aggregator";
+            String login = "postgres";
+            String password = "password";
+            try (Connection connection = DriverManager.getConnection(url, login, password)) {
+                DatabaseMetaData metaData = connection.getMetaData();
+                System.out.println("Connection database successfully");
+                System.out.println(metaData.getUserName());
+                System.out.println(metaData.getURL());
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
             String path = "src/main/resources/rabbit.properties";
             List<Long> store = new ArrayList<>();
             Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
@@ -32,8 +49,8 @@ public class AlertRabbit {
             Thread.sleep(10000);
             scheduler.shutdown();
             System.out.println(store);
-        } catch (Exception se) {
-            se.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
