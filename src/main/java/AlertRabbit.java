@@ -1,8 +1,10 @@
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Date;
 import static org.quartz.JobBuilder.*;
 import static org.quartz.TriggerBuilder.*;
 import static org.quartz.SimpleScheduleBuilder.*;
@@ -11,7 +13,6 @@ public class AlertRabbit {
 
     public static void main(String[] args) {
         try {
-            writeRunTimeSql();
             String path = "src/main/resources/rabbit.properties";
             List<Long> store = new ArrayList<>();
             Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
@@ -31,7 +32,7 @@ public class AlertRabbit {
             scheduler.scheduleJob(job, trigger);
             Thread.sleep(10000);
             scheduler.shutdown();
-            System.out.println(store);
+            System.out.println("Data store " + store);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -44,15 +45,17 @@ public class AlertRabbit {
     }
 
     public static void writeRunTimeSql() throws ClassNotFoundException {
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String date = df.format(new Date());
         Class.forName("org.postgresql.Driver");
         String url = "jdbc:postgresql://localhost:5432/aggregator";
         String login = "postgres";
         String password = "password";
         try (Connection connection = DriverManager.getConnection(url, login, password)) {
-            System.out.println("Connection database successfully");
+            System.out.println("Connection sql database successfully");
             try (Statement statement = connection.createStatement()) {
-                String addTimeQuery = "INSERT INTO logs.rabbit(id, created_date)"
-                        + "VALUES(3, 'date_test3')";
+                String addTimeQuery = "INSERT INTO logs.rabbit(created_date)"
+                        + String.format("VALUES('%s')",date);
                 statement.execute(addTimeQuery);
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -70,7 +73,13 @@ public class AlertRabbit {
         }
         @Override
         public void execute(JobExecutionContext context) {
-            System.out.println("Rabbit runs here");
+            System.out.println("Rabbit runs...");
+            try {
+                writeRunTimeSql();
+                System.out.println("Time recorded to database");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
             List<Long> store = (List<Long>) context
                     .getJobDetail()
                     .getJobDataMap()
