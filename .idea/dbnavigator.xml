@@ -28,11 +28,13 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="117e3ba5-e159-4ba8-a8c2-490bcf21844e">
-      <console name="Connection" type="STANDARD" schema="information_schema" session="Main" />
+      <console name="Connection" type="STANDARD" schema="information_schema" session="Main"><![CDATA[SELECT * FROM logs.rabbit;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="117e3ba5-e159-4ba8-a8c2-490bcf21844e" object-ref="consoles/Connection" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="117e3ba5-e159-4ba8-a8c2-490bcf21844e" />
