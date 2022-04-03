@@ -1,8 +1,7 @@
 package utils;
 
-import java.text.ParseException;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public interface DateTimeParser {
-    Date parse(String parse) throws ParseException;
+    LocalDateTime parse(String parse);
 }

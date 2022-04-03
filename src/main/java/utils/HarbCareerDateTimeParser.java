@@ -1,14 +1,12 @@
 package utils;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class HarbCareerDateTimeParser implements DateTimeParser{
 
     @Override
-    public Date parse(String toparse) throws ParseException {
-        Date date = new SimpleDateFormat("").parse(toparse);
+    public LocalDateTime parse(String parse) {
+        LocalDateTime date = LocalDateTime.parse(parse);
         return date;
     }
 }
