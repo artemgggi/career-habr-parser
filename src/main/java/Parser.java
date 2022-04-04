@@ -30,4 +30,8 @@ public class Parser {
             list++;
         }
     }
+
+    private String retrieveDescription(String link) {
+        return null;
+    }
 }
