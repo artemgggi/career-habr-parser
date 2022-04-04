@@ -31,7 +31,11 @@ public class Parser {
         }
     }
 
-    private String retrieveDescription(String link) {
-        return null;
+    private String retrieveDescription(String link) throws IOException {
+        Connection connection = Jsoup.connect(link);
+        Document document = connection.get();
+        Element descriprion = document.select(".page-section").first();
+        String textDescription = descriprion.text();
+        return textDescription;
     }
 }
