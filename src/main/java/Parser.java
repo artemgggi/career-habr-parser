@@ -25,7 +25,7 @@ public class Parser {
                 String vacancyName = titleElement.text();
                 String date = dateElement.text();
                 String link = String.format("%s%s", SOURCE_LINK, linkElement.attr("href"));
-                System.out.printf("%s %s%n %s", vacancyName, link, date);
+                System.out.printf("%s %s %n %s ", vacancyName, link, date);
             });
             list++;
         }

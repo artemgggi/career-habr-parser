@@ -6,8 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="aggregator (1)" />
         <module name="aggregator" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="aggregator (2)" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
