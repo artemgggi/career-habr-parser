@@ -1,3 +1,3 @@
 # vacancy-aggregator
-habr job parser service
+This console application collects information from the site career.habr.com.
 ![alt text](src/main/resources/images/consoleOutput.png)
