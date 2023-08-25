@@ -14,7 +14,7 @@ public class Parser {
 
     public static void main(String[] args) throws IOException {
         int list = 1;
-        while (list <= 5) {
+        while (list <= 3) {
             Connection connection = Jsoup.connect(PAGE_LINK + "?page=" + list);
             Document document = connection.get();
             Elements rows = document.select(".vacancy-card__inner");
@@ -34,8 +34,7 @@ public class Parser {
     private String retrieveDescription(String link) throws IOException {
         Connection connection = Jsoup.connect(link);
         Document document = connection.get();
-        Element descriprion = document.select(".page-section").first();
-        String textDescription = descriprion.text();
-        return textDescription;
+        Element description = document.select(".page-section").first();
+        return description.text();
     }
 }
