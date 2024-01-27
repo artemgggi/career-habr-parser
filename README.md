@@ -4,5 +4,6 @@ The program reads all vacancies from the first five pages of https://career.habr
 The system starts on schedule - once in a minute.
 The quartz startup period can be specified in app.properties.
 
-Technology stack: Java, JDBC, pSql, quartz
+Technology stack: Java, JDBC, PostgreSQL, Quartz
+
 ![alt text](src/main/resources/images/consoleOutput.png)
