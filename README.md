@@ -1,9 +1,16 @@
-Project "Agregator Java vacancies".
+## Project aggregator `career.habr.com`
+- The program reads latest vacancies from the first 5 pages of https://career.habr.com 
+related to Java and records them in the `PostgreSQL` database.
 
-The program reads all vacancies from the first five pages of https://career.habr.com related to Java and records them in the pSql database.
-The system starts on schedule - once in a minute.
-The quartz startup period can be specified in app.properties.
+- The system starts on schedule - once in a minute.
 
-Technology stack: Java, JDBC, PostgreSQL, Quartz
+- The `Quartz` startup period can be specified in app.properties `time`
 
-![alt text](src/main/resources/images/consoleOutput.png)
+## Usage
+- For launching program using main class `Grabber` 
+
+##### Technology stack:
+- ###### Java, JDBC, PostgreSQL, Quartz, Jsoup
+
+![alt text](src/main/resources/images/db.PNG)
+

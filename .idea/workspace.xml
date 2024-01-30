@@ -4,38 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="659cfecb-5dc6-441f-832a-8950041980ba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/checkstyle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/impl/Grabber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/impl/HabrCareerParse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/impl/PsqlStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interfaces/Grab.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interfaces/Parse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interfaces/Store.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Post.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/HabrCareerDateTimeParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/app.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/images/consoleOutput.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/utils/DateTimeParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AlertRabbit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Config.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Date_test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Grab.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HabrCareerParse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Parse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Parser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Store.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/HarbCareerDateTimeParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Post.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/diagram.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/rabbit.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rabbit.properties" afterDir="false" />
+    <list default="true" id="659cfecb-5dc6-441f-832a-8950041980ba" name="Changes" comment="refactored code">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/consoleOutput.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/consoleOutput.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,12 +128,36 @@
       <workItem from="1706549760755" duration="1054000" />
       <workItem from="1706597535325" duration="183000" />
       <workItem from="1706597754497" duration="10000" />
-      <workItem from="1706597772690" duration="13096000" />
+      <workItem from="1706597772690" duration="15200000" />
     </task>
+    <task id="LOCAL-00001" summary="refactored code">
+      <option name="closed" value="true" />
+      <created>1706612911397</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706612911397</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="app.properties" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refactored code" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored code" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
