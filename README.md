@@ -7,7 +7,7 @@ related to Java and records them in the `PostgreSQL` database.
 - The `Quartz` startup period can be specified in app.properties `time`
 
 ## Usage
-- For launching program using main class `Grabber` 
+- To run the program, run the main class `Grabber` 
 
 ## Technology stack:
 - ##### Java, JDBC, PostgreSQL, Quartz, Jsoup
