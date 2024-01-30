@@ -9,8 +9,8 @@ related to Java and records them in the `PostgreSQL` database.
 ## Usage
 - For launching program using main class `Grabber` 
 
-##### Technology stack:
-- ###### Java, JDBC, PostgreSQL, Quartz, Jsoup
+## Technology stack:
+- ##### Java, JDBC, PostgreSQL, Quartz, Jsoup
 
 ![alt text](src/main/resources/images/db.PNG)
 
