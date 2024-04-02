@@ -10,7 +10,7 @@ related to Java and records them in the `PostgreSQL` database.
 - To run the program, run the main class `Grabber` 
 
 ## Technology stack:
-- ##### Java, JDBC, PostgreSQL, Quartz, Jsoup
+- Java, JDBC, PostgreSQL, Quartz, Jsoup
 
 ![alt text](src/main/resources/images/db.PNG)
 
